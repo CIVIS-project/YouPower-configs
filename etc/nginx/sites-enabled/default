@@ -18,15 +18,13 @@
 ##
 
 server {
-	listen 		80;
-	listen 		[::]:80 ipv6only=on;
+	listen 		80; 
 	server_name	app.civisproject.eu;
 	return		301 https://$server_name$request_uri; 
 }
 
 server {
-	listen 			443 ssl;
-	listen 			[::]:443 ipv6only=on ssl;
+	listen 			443 ssl; 
 	server_name 	app.civisproject.eu; 
 	ssl 			on;
 	ssl_certificate 		/etc/ssl/private/ssl-bundle.crt;
